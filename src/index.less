@@ -5,16 +5,17 @@
 body {
   height: 100vh;
   font: 300 17px 'Source Sans Pro', sans-serif;
+  color: @light-text;
+  text-shadow: 1px 1px 2px @dark-bg;
   background-image: url("./bg-small.png");
   background-size: cover;
-  background-position: top 0 right -500px;
-  @media (min-width: 750px) {
-    background-position: top 0 right -350px;
+  background-position: top 0 right -350px;
+  @media (max-width: 750px) {
+    background-position: top 0 right -500px;
   }
   background-repeat: no-repeat;
   background-color: @dark-bg;
   overflow: hidden;
-  color: @light-text;
 
   a {
     color: @light-text;
@@ -26,20 +27,24 @@ body {
   }
 }
   
-// .text-container {
-//   height: 100vh;
-//   color: @light-text;
-// }
+.text-container {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  @media (max-width: 650px),(max-height: 700px) {
+    top: 0;
+    left: 20px;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 
 .header {
-  position: absolute;
-  top: 0;
-  left: 20px;
-  @media (min-width: 650px) {
-    top: 10%;
-    left: 10%;
+  @media (min-width: 600px) {
+    margin-left: 20px;
   }
-  text-align: center;
+
   h1 {
     font: 50px 'Sawarabi Mincho', sans-serif;
     margin-bottom: 0px;
@@ -60,49 +65,45 @@ nav {
     padding: 5px;
     text-transform: uppercase;
     border: none;
-    margin: 0 5px;
+    margin: 0 10px 0 0;
 
     &:hover, &:focus {
       outline: none;
-      background-color: rgb(84, 84, 99);
+      background-color: rgb(56, 60, 84);
       cursor: pointer;
     }
   }
 }
   
 .text {
-  width: 80vw;
+  width: 600px;
   height: 70vh;
-  position: absolute;
-  top: 25%;
-  left: 8%;
-  @media (min-width: 650px) {
-    top: 30%;
-    width: 600px;
-    height: 500px;
-    &::-webkit-scrollbar-thumb {
-      background: rgb(133, 133, 133);
-      border-radius: 10px;
-    }
-    &::-webkit-scrollbar {
-      width: 5px;
-    }
+  @media (max-height: 750px) {
+    height: 50vh;
   }
-  @media (min-height: 950px) {
-    top: 25%;
+  @media (max-width: 650px) {
+    width: 80vw;
   }
   overflow-y: scroll;
-  padding-right: 15px;
-  text-align: left;
+  padding: 0 15px 15px 0;
+  margin-bottom: 20px;
   h2 {
     font: 25px 'Sawarabi Mincho', sans-serif;
     margin: 0;
     padding: 0;
   }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgb(230, 230, 230);
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
 }
 
 .social {
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
   p {
     font-size: 60%;

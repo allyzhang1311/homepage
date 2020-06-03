@@ -13,10 +13,9 @@ class LandingPg extends React.Component {
       <span>
         <h2>Welcome</h2>
         <p>
-          Cornell University 2017-2020. Budding computer scientist,
-          developer and linguist; longtime reader, learner and nerd. You can
-          find me at the links below, or just click around! And yes, that's my
-          real legal name.
+          Cornell University 2017-2020. Budding software engineer
+          and linguist; longtime reader and nerd. You can
+          find me at the links below, or just click around!
         </p>
         <Social />
       </span>
@@ -48,8 +47,8 @@ class AboutPg extends React.Component {
         <p>
           In my spare time, I sing in the Cornell Chorale, hike around
           Ithaca's beautiful gorges, and draw embarrassing doodles. I'm also a big
-          fan of fantasy novels and am now on my tenth read-through of
-          <em>The Lord of the Rings</em>! Probably more than tenth, actually...
+          fan of fantasy novels and am now on my tenth <em>Lord of the Rings</em> read-through.
+          Probably more than tenth, actually...
         </p>
       </span>
     );
@@ -154,7 +153,7 @@ class Main extends React.Component {
             <button onClick={this.movePage} value="About">About</button>
             <button onClick={this.movePage} value="Projects">Projects</button>
             <button value="Resume">
-              <a href={resume} target="_blank" rel='noopener noreferrer'>Resumé</a>
+              <a href={resume} target="_blank" rel='noopener noreferrer'>Résumé</a>
             </button>
           </nav>
         </div>

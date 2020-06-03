@@ -29,17 +29,18 @@
 body {
   height: 100vh;
   font: 300 17px 'Source Sans Pro', sans-serif;
+  color: #f7f7f7;
+  text-shadow: 1px 1px 2px #07080d;
   background-image: url("./bg-small.png");
   background-size: cover;
-  background-position: top 0 right -500px;
+  background-position: top 0 right -350px;
   background-repeat: no-repeat;
   background-color: #07080d;
   overflow: hidden;
-  color: #f7f7f7;
 }
-@media (min-width: 750px) {
+@media (max-width: 750px) {
   body {
-    background-position: top 0 right -350px;
+    background-position: top 0 right -500px;
   }
 }
 body a {
@@ -50,16 +51,23 @@ body a {
 body a:focus {
   outline: none;
 }
-.header {
+.text-container {
   position: absolute;
-  top: 0;
-  left: 20px;
-  text-align: center;
+  top: 10%;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
-@media (min-width: 650px) {
+@media (max-width: 650px), (max-height: 700px) {
+  .text-container {
+    top: 0;
+    left: 20px;
+  }
+}
+@media (min-width: 600px) {
   .header {
-    top: 10%;
-    left: 10%;
+    margin-left: 20px;
   }
 }
 .header h1 {
@@ -80,41 +88,29 @@ nav button {
   padding: 5px;
   text-transform: uppercase;
   border: none;
-  margin: 0 5px;
+  margin: 0 10px 0 0;
 }
 nav button:hover,
 nav button:focus {
   outline: none;
-  background-color: #545463;
+  background-color: #383c54;
   cursor: pointer;
 }
 .text {
-  width: 80vw;
+  width: 600px;
   height: 70vh;
-  position: absolute;
-  top: 25%;
-  left: 8%;
   overflow-y: scroll;
-  padding-right: 15px;
-  text-align: left;
+  padding: 0 15px 15px 0;
+  margin-bottom: 20px;
 }
-@media (min-width: 650px) {
+@media (max-height: 750px) {
   .text {
-    top: 30%;
-    width: 600px;
-    height: 500px;
-  }
-  .text::-webkit-scrollbar-thumb {
-    background: #858585;
-    border-radius: 10px;
-  }
-  .text::-webkit-scrollbar {
-    width: 5px;
+    height: 50vh;
   }
 }
-@media (min-height: 950px) {
+@media (max-width: 650px) {
   .text {
-    top: 25%;
+    width: 80vw;
   }
 }
 .text h2 {
@@ -122,8 +118,15 @@ nav button:focus {
   margin: 0;
   padding: 0;
 }
+.text::-webkit-scrollbar-thumb {
+  background: #e6e6e6;
+  border-radius: 10px;
+}
+.text::-webkit-scrollbar {
+  width: 5px;
+}
 .social {
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
 }
 .social p {
