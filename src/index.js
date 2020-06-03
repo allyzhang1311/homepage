@@ -4,6 +4,7 @@ import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faAt } from '@fortawesome/free-solid-svg-icons'
+import resume from './2019resume.pdf'
 
 class LandingPg extends React.Component {
 
@@ -153,7 +154,7 @@ class Main extends React.Component {
             <button onClick={this.movePage} value="About">About</button>
             <button onClick={this.movePage} value="Projects">Projects</button>
             <button value="Resume">
-              <a href="../assets/2019resume.pdf" target="_blank" rel='noopener noreferrer'>Resumé</a>
+              <a href={resume} target="_blank" rel='noopener noreferrer'>Resumé</a>
             </button>
           </nav>
         </div>
