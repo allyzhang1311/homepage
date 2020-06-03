@@ -1,31 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Source+Sans+Pro&family=Source+Sans+Pro:wght@700&family=Source+Sans+Pro:wght@300&display=swap');
+@light-text: rgb(247, 247, 247);
+@dark-bg: #07080d;
 
 body {
-  font: 14px "Bodoni 72", Garamond, serif;
-  background-image: url("./bg1.png");
-  background-size: contain;
-  background-position: top 0% left 500px;
-  background-repeat: no-repeat;
-  background-color: rgb(26, 26, 36);
-  overflow: hidden;
-}
-  
-.text-container {
   height: 100vh;
-  color: white;
-}
-  
-.text {
-  width: 50vh;
-  height: 50vh;
-  position: relative;
-  top: 30%;
-  left: 20%;
-  text-align: center;
-  overflow-y: scroll;
-  padding: 10px;
-  h1 {
-    font: 50px 'Nanum Gothic', 'Century Gothic', sans-serif;
+  font: 300 17px 'Source Sans Pro', sans-serif;
+  background-image: url("./bg.png");
+  background-size: cover;
+  background-position: top 0 right -500px;
+  @media (min-width: 750px) {
+    background-position: top 0 right -350px;
+  }
+  background-repeat: no-repeat;
+  background-color: @dark-bg;
+  overflow: hidden;
+  color: @light-text;
+
+  a {
+    color: @light-text;
+    text-decoration: underline;
+    font-weight: 400;
+    &:focus {
+      outline: none;
+    }
   }
 }
   
+// .text-container {
+//   height: 100vh;
+//   color: @light-text;
+// }
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  @media (min-width: 650px) {
+    top: 10%;
+    left: 10%;
+  }
+  text-align: center;
+  h1 {
+    font: 50px 'Sawarabi Mincho', sans-serif;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+nav {
+  margin-bottom: 20px;
+
+  button {
+    background-color: @dark-bg;
+    font: 400 15px 'Source Sans Pro', sans-serif;
+    color: @light-text;
+    padding: 5px;
+    text-transform: uppercase;
+    border: none;
+    margin: 0 5px;
+
+    &:hover, &:focus {
+      outline: none;
+      background-color: rgb(84, 84, 99);
+      cursor: pointer;
+    }
+  }
+}
+  
+.text {
+  width: 80vw;
+  height: 70vh;
+  position: absolute;
+  top: 25%;
+  left: 8%;
+  @media (min-width: 650px) {
+    top: 30%;
+    width: 600px;
+    height: 500px;
+    &::-webkit-scrollbar-thumb {
+      background: rgb(133, 133, 133);
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+  }
+  @media (min-height: 950px) {
+    top: 25%;
+  }
+  overflow-y: scroll;
+  padding-right: 15px;
+  text-align: left;
+  h2 {
+    font: 25px 'Sawarabi Mincho', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.social {
+  margin-top: 20px;
+  text-align: center;
+  p {
+    font-size: 60%;
+    margin: 5px;
+  }
+
+  a {
+    margin-right: 10px;
+    color: @light-text;
+
+    &:hover, &:focus {
+      outline: none;
+      color: rgb(219, 219, 219);
+    }
+  }
+}

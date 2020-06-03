@@ -1,33 +1,141 @@
 @font-face {
-  font-family: 'Nanum Gothic';
+  font-family: 'Sawarabi Mincho';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('NanumGothic'), url(https://fonts.gstatic.com/s/nanumgothic/v17/PN_3Rfi-oW3hYwmKDpxS7F_z_g.ttf) format('truetype');
+  src: local('Sawarabi Mincho'), local('SawarabiMincho-Regular'), url(https://fonts.gstatic.com/s/sawarabimincho/v10/8QIRdiDaitzr7brc8ahpxt6GcIJTLQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zAkA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xK3dSBYKcSV-LCoeQqfX1RYOo3aPw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vAkA.ttf) format('truetype');
 }
 body {
-  font: 14px "Bodoni 72", Garamond, serif;
-  background-image: url("./bg1.png");
-  background-size: contain;
-  background-position: top 0% left 500px;
-  background-repeat: no-repeat;
-  background-color: #1a1a24;
-  overflow: hidden;
-}
-.text-container {
   height: 100vh;
-  color: white;
+  font: 300 17px 'Source Sans Pro', sans-serif;
+  background-image: url("./bg2.png");
+  background-size: cover;
+  background-position: top 0 right -500px;
+  background-repeat: no-repeat;
+  background-color: #07080d;
+  overflow: hidden;
+  color: #f7f7f7;
+}
+@media (min-width: 750px) {
+  body {
+    background-position: top 0 right -350px;
+  }
+}
+body a {
+  color: #f7f7f7;
+  text-decoration: underline;
+  font-weight: 400;
+}
+body a:focus {
+  outline: none;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  text-align: center;
+}
+@media (min-width: 650px) {
+  .header {
+    top: 10%;
+    left: 10%;
+  }
+}
+.header h1 {
+  font: 50px 'Sawarabi Mincho', sans-serif;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.header a {
+  text-decoration: none;
+}
+nav {
+  margin-bottom: 20px;
+}
+nav button {
+  background-color: #07080d;
+  font: 400 15px 'Source Sans Pro', sans-serif;
+  color: #f7f7f7;
+  padding: 5px;
+  text-transform: uppercase;
+  border: none;
+  margin: 0 5px;
+}
+nav button:hover,
+nav button:focus {
+  outline: none;
+  background-color: #545463;
+  cursor: pointer;
 }
 .text {
-  width: 50vh;
-  height: 50vh;
-  position: relative;
-  top: 30%;
-  left: 20%;
-  text-align: center;
+  width: 80vw;
+  height: 70vh;
+  position: absolute;
+  top: 25%;
+  left: 8%;
   overflow-y: scroll;
-  padding: 10px;
+  padding-right: 15px;
+  text-align: left;
 }
-.text h1 {
-  font: 50px 'Nanum Gothic', 'Century Gothic', sans-serif;
+@media (min-width: 650px) {
+  .text {
+    top: 30%;
+    width: 600px;
+    height: 500px;
+  }
+  .text::-webkit-scrollbar-thumb {
+    background: #858585;
+    border-radius: 10px;
+  }
+  .text::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+@media (min-height: 950px) {
+  .text {
+    top: 25%;
+  }
+}
+.text h2 {
+  font: 25px 'Sawarabi Mincho', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.social {
+  margin-top: 20px;
+  text-align: center;
+}
+.social p {
+  font-size: 60%;
+  margin: 5px;
+}
+.social a {
+  margin-right: 10px;
+  color: #f7f7f7;
+}
+.social a:hover,
+.social a:focus {
+  outline: none;
+  color: #dbdbdb;
 }
