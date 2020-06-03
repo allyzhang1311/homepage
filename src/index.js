@@ -14,7 +14,7 @@ class LandingPg extends React.Component {
         <h2>Welcome</h2>
         <p>
           Cornell University 2017-2020. Budding software engineer
-          and linguist; longtime reader and nerd. You can
+          and linguist, longtime reader and nerd. You can
           find me at the links below, or just click around!
         </p>
         <Social />
@@ -30,13 +30,13 @@ class AboutPg extends React.Component {
       <span>
         <h2>About Me</h2>
         <p>
-          I am currently a senior at Cornell University pursuing
+          I'm currently a senior at Cornell University pursuing
           a B.A. in Computer Science and Linguistics. My main areas of
           interest are system architecture, natural language processing
           and web development.
         </p>
         <p>
-          I have interned at Fidelity Investments and MasterCard, where
+          I've interned at Fidelity Investments and MasterCard, where
           I spent summers developing websites and tools for internal testers.
           Additionally, I've conducted NLP research in both the Linguistics and
           Computer Science departments, focusing on machine learning and automated
@@ -45,8 +45,8 @@ class AboutPg extends React.Component {
           core systems and C course.
         </p>
         <p>
-          In my spare time, I sing in the Cornell Chorale, hike around
-          Ithaca's beautiful gorges, and draw embarrassing doodles. I'm also a big
+          In my spare time, I like to sing in the Cornell Chorale, hike around
+          Ithaca's beautiful gorges, and doodle aimlessly. I'm also a big
           fan of fantasy novels and am now on my tenth <em>Lord of the Rings</em> read-through.
           Probably more than tenth, actually...
         </p>
