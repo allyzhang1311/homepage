@@ -1,67 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Source+Sans+Pro&family=Source+Sans+Pro:wght@700&family=Source+Sans+Pro:wght@300&display=swap');
-@light-text: rgb(247, 247, 247);
-@dark-bg: #07080d;
+@off-white: #e9effa;
+@background: #07080d;
+@light-brown: #dbbfb3;
+@light-blue: #aabcdb;
+@lighter-blue: #d1dcf1;
+@dark-brown: #2c2724;
 
 body {
-  height: 100vh;
   font: 300 17px 'Source Sans Pro', sans-serif;
-  color: @light-text;
-  text-shadow: 1px 1px 2px @dark-bg;
-  background-image: url("./bg-small.png");
-  background-size: cover;
-  background-position: top 0 right -350px;
-  @media (max-width: 750px) {
-    background-position: top 0 right -500px;
-  }
-  background-repeat: no-repeat;
-  background-color: @dark-bg;
+  color: #f7f7f7;
+  text-shadow: 1px 1px 2px #07080d;
+  background-color: #fff;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font: 50px 'Sawarabi Mincho', sans-serif;
+  color: @lighter-blue;
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  font: 25px 'Sawarabi Mincho', sans-serif;
+  color: @lighter-blue;
+  margin: 0;
+  padding: 0;
+}
 
-  a {
-    color: @light-text;
-    text-decoration: underline;
-    font-weight: 400;
+a {
+  color: @light-blue;
+  text-decoration: underline;
+  font-weight: 400;
     &:focus {
-      outline: none;
-    }
-  }
-}
-  
-.text-container {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  @media (max-width: 650px),(max-height: 700px) {
-    top: 0;
-    left: 20px;
-  }
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.header {
-  @media (min-width: 600px) {
-    margin-left: 20px;
-  }
-
-  h1 {
-    font: 50px 'Sawarabi Mincho', sans-serif;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-  }
-  a {
-    text-decoration: none;
+    outline: none;
+    color: @lighter-blue;
   }
 }
 
 nav {
-  margin-bottom: 20px;
-
   button {
-    background-color: @dark-bg;
+    background-color: @background;
     font: 400 15px 'Source Sans Pro', sans-serif;
-    color: @light-text;
+    color: @light-brown;
     padding: 5px;
     text-transform: uppercase;
     border: none;
@@ -69,36 +50,13 @@ nav {
 
     &:hover, &:focus {
       outline: none;
-      background-color: rgb(56, 60, 84);
+      background-color: @dark-brown;
       cursor: pointer;
     }
   }
-}
-  
-.text {
-  width: 600px;
-  height: 70vh;
-  @media (max-height: 750px) {
-    height: 50vh;
-  }
-  @media (max-width: 650px) {
-    width: 80vw;
-  }
-  overflow-y: scroll;
-  padding: 0 15px 15px 0;
-  margin-bottom: 20px;
-  h2 {
-    font: 25px 'Sawarabi Mincho', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: rgb(230, 230, 230);
-    border-radius: 10px;
-  }
-  &::-webkit-scrollbar {
-    width: 5px;
+  a {
+    color: @light-brown;
+    text-decoration: none;
   }
 }
 
@@ -112,11 +70,11 @@ nav {
 
   a {
     margin-right: 10px;
-    color: @light-text;
+    color: @light-blue;
 
     &:hover, &:focus {
       outline: none;
-      color: rgb(219, 219, 219);
+      color: @lighter-blue;
     }
   }
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faAt } from '@fortawesome/free-solid-svg-icons'
@@ -24,15 +24,13 @@ function Social() {
 
 function Home() {
     return (
-        <span>
+        <>
             <h2>Welcome</h2>
-            <p>
-                Cornell University 2017-2020. Budding software engineer
-                and linguist, longtime reader and nerd. You can
-                find me at the links below, or just click around!
-            </p>
+            <div className="main-text">
+                <p>Cornell University 2017-2020. Budding software engineer and linguist, longtime reader and nerd. You can find me at the links below, or just click around!</p>
+            </div>
             <Social />
-        </span>
+        </>
     );
 }
 

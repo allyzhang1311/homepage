@@ -27,64 +27,39 @@
   src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vAkA.ttf) format('truetype');
 }
 body {
-  height: 100vh;
   font: 300 17px 'Source Sans Pro', sans-serif;
   color: #f7f7f7;
   text-shadow: 1px 1px 2px #07080d;
-  background-image: url("./bg-small.png");
-  background-size: cover;
-  background-position: top 0 right -350px;
-  background-repeat: no-repeat;
-  background-color: #07080d;
+  background-color: #fff;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
-@media (max-width: 750px) {
-  body {
-    background-position: top 0 right -500px;
-  }
+h1 {
+  font: 50px 'Sawarabi Mincho', sans-serif;
+  color: #d1dcf1;
+  margin: 0;
+  padding: 0;
 }
-body a {
-  color: #f7f7f7;
+h2 {
+  font: 25px 'Sawarabi Mincho', sans-serif;
+  color: #d1dcf1;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #aabcdb;
   text-decoration: underline;
   font-weight: 400;
 }
-body a:focus {
+a:focus {
   outline: none;
-}
-.text-container {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-@media (max-width: 650px), (max-height: 700px) {
-  .text-container {
-    top: 0;
-    left: 20px;
-  }
-}
-@media (min-width: 600px) {
-  .header {
-    margin-left: 20px;
-  }
-}
-.header h1 {
-  font: 50px 'Sawarabi Mincho', sans-serif;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-}
-.header a {
-  text-decoration: none;
-}
-nav {
-  margin-bottom: 20px;
+  color: #d1dcf1;
 }
 nav button {
   background-color: #07080d;
   font: 400 15px 'Source Sans Pro', sans-serif;
-  color: #f7f7f7;
+  color: #dbbfb3;
   padding: 5px;
   text-transform: uppercase;
   border: none;
@@ -93,37 +68,12 @@ nav button {
 nav button:hover,
 nav button:focus {
   outline: none;
-  background-color: #383c54;
+  background-color: #2c2724;
   cursor: pointer;
 }
-.text {
-  width: 600px;
-  height: 70vh;
-  overflow-y: scroll;
-  padding: 0 15px 15px 0;
-  margin-bottom: 20px;
-}
-@media (max-height: 750px) {
-  .text {
-    height: 50vh;
-  }
-}
-@media (max-width: 650px) {
-  .text {
-    width: 80vw;
-  }
-}
-.text h2 {
-  font: 25px 'Sawarabi Mincho', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-.text::-webkit-scrollbar-thumb {
-  background: #e6e6e6;
-  border-radius: 10px;
-}
-.text::-webkit-scrollbar {
-  width: 5px;
+nav a {
+  color: #dbbfb3;
+  text-decoration: none;
 }
 .social {
   margin-top: 30px;
@@ -135,10 +85,10 @@ nav button:focus {
 }
 .social a {
   margin-right: 10px;
-  color: #f7f7f7;
+  color: #aabcdb;
 }
 .social a:hover,
 .social a:focus {
   outline: none;
-  color: #dbdbdb;
+  color: #d1dcf1;
 }
