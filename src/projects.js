@@ -12,6 +12,7 @@ import me from './assets/me.png'
 import serverfarm from './assets/serverfarm.jpeg'
 import coffeetable from './assets/coffeetable.jpg'
 import boba from './assets/boba.jpg'
+import bobapaper from './assets/bobapaper.pdf'
 
 const ProjAcc = withStyles({
     root: {
@@ -81,12 +82,13 @@ function Projects() {
                     <ProjAccDetails>
                         <img src={boba} width="200px" style={{ float: "left" }} />
                         <p>
-                            'Bubble tea', 'boba'... this Taiwanese drink's taken the world by storm,
+                            'Bubble tea', 'boba'... this Taiwanese drink took the world by storm,
                             but who calls it what? <a href="https://lucia-gomez.netlify.app/">Lucia Gomez</a> and I
                             surveyed over 200 English speakers around the U.S. and analyzed the results by ethnicity,
                             age, location and other key sociolinguistic factors - highlighting the links between simple
                             word choices and the thorny landscape of Asian diaspora.<br /><br />
-                            View our interactive <a href="https://public.tableau.com/profile/lucia.gomez#!/vizhome/BubbleTeaBobaWordChoice/Sheet1">choropleth maps</a> and <a href="https://public.tableau.com/profile/lucia.gomez#!/vizhome/BubbleTeaBobaWordChoice/Heatmaps">heatmaps</a> on Tableau.
+                            View our interactive <a href="https://public.tableau.com/profile/lucia.gomez#!/vizhome/BubbleTeaBobaWordChoice/Sheet1">choropleth maps</a> and <a href="https://public.tableau.com/profile/lucia.gomez#!/vizhome/BubbleTeaBobaWordChoice/Heatmaps">heatmaps</a> on
+                            Tableau, or read about our findings <a href={bobapaper}>here</a>.
                         </p>
                     </ProjAccDetails>
                 </ProjAcc>
@@ -102,6 +104,7 @@ function Projects() {
                             Python NLP libraries to study linguistic features of players' messages, such as common lemmas and token
                             distribution over the course of the game.<br /><br />
                             Details and demos can be found on the <a href="http://lil.nlp.cornell.edu/cerealbar/">CerealBar website</a>.
+                            And no, I don't know why it's called that.
                         </p>
                     </ProjAccDetails>
                 </ProjAcc>
@@ -161,7 +164,7 @@ function Projects() {
                             the <a href="https://fomafst.github.io/">Foma</a> library to move these transcripts from
                             their original phonetic representation to an ASCII-friendly format. This work, done
                             under <a href="https://compling.cis.cornell.edu/mr249/index.html">Mats Rooth</a> and Simone
-                            Harmath-de Lemos, helped further study of Portuguese prosody and text-digitalization.
+                            Harmath-de Lemos, helped further the study of Portuguese prosody and text-digitalization.
                         </p>
                     </ProjAccDetails>
                 </ProjAcc>

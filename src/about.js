@@ -1,9 +1,11 @@
 import React from 'react';
+import mehead from './assets/mehead.png'
 
 function About() {
     return (
         <>
             <h2>About Me</h2>
+            <img src={mehead} width="200px" style={{ float: "left" }} />
             <p>
                 I'm currently a senior at <b>Cornell University</b> pursuing
                 a B.A. in Computer Science and Linguistics. My main areas of

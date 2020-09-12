@@ -14,8 +14,8 @@ import About from './about.js'
 import Projects from './projects.js'
 
 import './index.css';
-import resume from './resume2020.pdf'
-import BackgroundImage from './bg-small.png'
+import resume from './assets/resume2020.pdf'
+import BackgroundImage from './assets/bg-small.png'
 
 const getStyles = makeStyles((theme) => ({
   fullContainer: {
