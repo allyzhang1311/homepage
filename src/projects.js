@@ -5,6 +5,7 @@ import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import { withStyles } from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { makeStyles } from '@material-ui/core/styles'
 
 import contrastset from './assets/contrastset.png'
 import cerealbar from './assets/cerealbar.png'
@@ -13,6 +14,23 @@ import serverfarm from './assets/serverfarm.jpeg'
 import coffeetable from './assets/coffeetable.jpg'
 import boba from './assets/boba.jpg'
 import bobapaper from './assets/bobapaper.pdf'
+
+const getStyles = makeStyles((theme) => ({
+    imgLeft: {
+        float: "left",
+        width: "200px",
+        [theme.breakpoints.down('sm')]: {
+            width: "40%",
+        },
+    },
+    imgRight: {
+        float: "right",
+        width: "200px",
+        [theme.breakpoints.down('sm')]: {
+            width: "40%",
+        },
+    }
+}));
 
 const ProjAcc = withStyles({
     root: {
@@ -64,8 +82,7 @@ function DownChev() {
 }
 
 function Projects() {
-
-    // let { path, url } = useRouteMatch();
+    const css = getStyles();
 
     return (
         <>
@@ -80,8 +97,8 @@ function Projects() {
                 <ProjAcc>
                     <ProjAccSummary expandIcon={<DownChev />}>Bubble tea: what's in a name?</ProjAccSummary>
                     <ProjAccDetails>
-                        <img src={boba} width="200px" style={{ float: "left" }} />
                         <p>
+                            <img src={boba} className={css.imgLeft} />
                             'Bubble tea', 'boba'... this Taiwanese drink took the world by storm,
                             but who calls it what? <a href="https://lucia-gomez.netlify.app/">Lucia Gomez</a> and I
                             surveyed over 200 English speakers around the U.S. and analyzed the results by ethnicity,
@@ -96,7 +113,7 @@ function Projects() {
                     <ProjAccSummary expandIcon={<DownChev />}>Chatting with CerealBar</ProjAccSummary>
                     <ProjAccDetails>
                         <p>
-                            <img src={cerealbar} height="200px" width="230px" style={{ float: "right" }} />
+                            <img src={cerealbar} className={css.imgRight} />
                             I worked under <a href="http://yoavartzi.com/">Yoav Artzi</a> and <a href="http://alanesuhr.com/">Alane Suhr</a> in
                             the Cornell Language, Interaction and Learning (LIL) Lab to analyze
                             chat logs of CerealBar, a game developed to study collaborative natural-language interactions
@@ -112,7 +129,7 @@ function Projects() {
                     <ProjAccSummary expandIcon={<DownChev />}>This very website</ProjAccSummary>
                     <ProjAccDetails>
                         <p>
-                            <img src={me} width="200px" style={{ float: "left" }} />
+                            <img src={me} className={css.imgLeft} />
                             Yep, the one you're looking at. Developed in JavaScript using the React framework,
                             it also makes use of Material-UI for design components and Sass for styling.<br /><br />
                             Like all personal websites, it seems to be a perpetual work in progress...
@@ -123,7 +140,7 @@ function Projects() {
                     <ProjAccSummary expandIcon={<DownChev />}>Databases from the ground up</ProjAccSummary>
                     <ProjAccDetails>
                         <p>
-                            <img src={serverfarm} width="200px" style={{ float: "right" }} />
+                            <img src={serverfarm} className={css.imgRight} />
                             For my semester-long practicum, a hallmark of every Cornell CS student's education (for better
                             or worse!), I worked with Mike Fang and Nickolas Cavagnaro to develop a complex database management system
                             in Java. Our DBMS uses <a href="https://github.com/JSQLParser/JSqlParser/wiki">JSQLParser</a> to read SQL queries
@@ -137,7 +154,7 @@ function Projects() {
                     <ProjAccSummary expandIcon={<DownChev />}>Eternal captions of the spotless mind</ProjAccSummary>
                     <ProjAccDetails>
                         <p>
-                            <img src={contrastset} height="300px" style={{ float: "left" }} />
+                            <img src={contrastset} className={css.imgLeft} />
                             As part of the Cornell LIL Lab (see 'Chatting with CerealBar') I worked to develop and analyze
                             datasets of image captions for training neural networks. My main focus was <a href="http://lil.nlp.cornell.edu/nlvr/">NLVR2</a>, a
                             a corpus testing models' ability to reason about the truth value of a sentence for a pair of images.<br /><br />
@@ -157,7 +174,7 @@ function Projects() {
                     <ProjAccSummary expandIcon={<DownChev />}>Você pode me ouvir? Portuguese phonetic parsing</ProjAccSummary>
                     <ProjAccDetails>
                         <p>
-                            <img src={coffeetable} width="200px" style={{ float: "right" }} />
+                            <img src={coffeetable} className={css.imgRight} />
                             In the Cornell Computational Linguistics Lab, I developed a Python XML parser for audio
                             transcripts from the <a href="http://www.c-oral-brasil.org/english-site/index.html">C-ORAL</a> and <a href="https://catalog.ldc.upenn.edu/LDC2008S04">West Point</a> Brazilian
                             Portuguese corpora, and in addition created a finite-state transducer in
