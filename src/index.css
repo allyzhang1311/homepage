@@ -48,13 +48,16 @@ h2 {
   padding: 0;
 }
 a {
-  color: #aabcdb;
+  color: #bbc9e0;
   text-decoration: underline;
-  font-weight: 400;
+  font-weight: 700;
 }
 a:focus {
   outline: none;
   color: #d1dcf1;
+}
+ul {
+  padding-left: 20px;
 }
 nav button {
   background-color: #07080d;
@@ -74,6 +77,7 @@ nav button:focus {
 nav a {
   color: #dbbfb3;
   text-decoration: none;
+  font-weight: 400;
 }
 .social {
   margin-top: 30px;
@@ -85,10 +89,12 @@ nav a {
 }
 .social a {
   margin-right: 10px;
-  color: #aabcdb;
 }
-.social a:hover,
-.social a:focus {
+.social .social-icon {
+  color: #dbbfb3;
+}
+.social .social-icon:hover,
+.social .social-icon:focus {
   outline: none;
-  color: #d1dcf1;
+  color: #e7dad4;
 }

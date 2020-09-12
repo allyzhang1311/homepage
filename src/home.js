@@ -6,13 +6,16 @@ import { faAt } from '@fortawesome/free-solid-svg-icons'
 function Social() {
     return (
         <div className="social">
-            <a href="https://github.com/allyzhang1311" target="_blank" rel='noopener noreferrer'>
+            <a href="https://github.com/allyzhang1311" target="_blank" rel='noopener noreferrer'
+                className="social-icon">
                 <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
-            <a href="https://www.linkedin.com/in/allyzhang1311/" target="_blank" rel='noopener noreferrer'>
+            <a href="https://www.linkedin.com/in/allyzhang1311/" target="_blank" rel='noopener noreferrer'
+                className="social-icon">
                 <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </a>
-            <a href="mailto:ally.zhang.1311@gmail.com" target="_blank" rel='noopener noreferrer'>
+            <a href="mailto:ally.zhang.1311@gmail.com" target="_blank" rel='noopener noreferrer'
+                className="social-icon">
                 <FontAwesomeIcon icon={faAt} size="2x" />
             </a>
             <p>

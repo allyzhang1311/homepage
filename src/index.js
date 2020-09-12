@@ -12,6 +12,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Home from './home.js'
 import About from './about.js'
 import Projects from './projects.js'
+import Research from './research.js'
 
 import './index.css';
 import resume from './resume2020.pdf'
@@ -47,8 +48,8 @@ const getStyles = makeStyles((theme) => ({
   },
   mainTextContainer: {
     overflowY: 'scroll',
-    padding: '0 15px 15px 0',
-    marginBottom: '20px',
+    padding: '0 20px 20px 0',
+    marginBottom: '30px',
     height: '70%',
     '&::-webkit-scrollbar-thumb': {
       background: '#b9b9b9',
@@ -72,6 +73,7 @@ function App() {
               <Link to="/"><button>Home</button></Link>
               <Link to="/about"><button>About</button></Link>
               <Link to="/projects"><button>Projects</button></Link>
+              <Link to="/research"><button>Research</button></Link>
               <button value="resume">
                 <a href={resume} target="_blank" rel='noopener noreferrer'>Résumé</a>
               </button>
@@ -86,6 +88,9 @@ function App() {
             </Route>
             <Route path="/projects">
               <Projects />
+            </Route>
+            <Route path="/research">
+              <Research />
             </Route>
             <Route path="/">
               <Home />
